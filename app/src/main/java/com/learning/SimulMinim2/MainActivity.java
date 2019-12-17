@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadData(){
-        Call<Museums> call = jsonData.getData();
+        Call<Museums> call = jsonData.getData("1", "15");
         call.enqueue(new Callback<Museums>() {
             @Override
             public void onResponse(Call<Museums> call, Response<Museums> response) {

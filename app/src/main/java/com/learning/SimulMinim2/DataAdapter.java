@@ -35,7 +35,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolderData
     @Override
     public void onBindViewHolder(@NonNull ViewHolderData holder, int position) {
         holder.data.setText(elementsMuseu.get(position).getAdrecaNom());
-        Picasso.with(context).load(elementsMuseu.get(position).getImatge().get(0)).into(holder.image);
+
+        Picasso.get().load(elementsMuseu.get(position).getImatge().get(0)).into(holder.image);
         //Picasso.get().load(elementsMuseu.get(position).getImage().get(0)).into(holder.image);
     }
 
