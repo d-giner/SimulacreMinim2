@@ -2,9 +2,6 @@ package com.learning.SimulMinim2.Retrofit.Models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.learning.SimulMinim2.Retrofit.Models.GrupAjuntament;
-import com.learning.SimulMinim2.Retrofit.Models.GrupComarca;
-import com.learning.SimulMinim2.Retrofit.Models.GrupProvincia;
 
 public class RelMunicipis {
 

@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -40,7 +41,15 @@ public class MainActivity extends AppCompatActivity {
         /** Ahora vamos a hacer que la lista tenga un tipo de layout lineal, poniendo solo el this, por defecto la lisa sería vertical. Aún así, lo vamos especificar. */
         recyclerList.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        loadData();
+        new CountDownTimer(1000,1000) { /** Timer de compte enrere per forçar la progress bar 1 segon */
+            @Override
+            public void onTick(long millisUntilFinished) {}
+
+            @Override
+            public void onFinish() {
+                loadData();
+            }
+        }.start();
     }
 
     private void loadData(){

@@ -1,7 +1,6 @@
 package com.learning.SimulMinim2;
 
 import android.content.Context;
-import android.icu.util.RangeValueIterator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.learning.SimulMinim2.Retrofit.Models.Element;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolderData> {
