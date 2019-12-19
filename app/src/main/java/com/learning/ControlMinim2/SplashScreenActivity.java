@@ -1,4 +1,4 @@
-package com.learning.SimulMinim2;
+package com.learning.ControlMinim2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,7 +20,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() { /** Al finalitzar el timer, iniciem la main activity */
-                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
                 startActivityForResult(intent, 0);
                 finish();
             }

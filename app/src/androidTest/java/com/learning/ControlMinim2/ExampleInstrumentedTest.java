@@ -1,4 +1,4 @@
-package com.learning.SimulMinim2;
+package com.learning.ControlMinim2;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.learning.SimulMinim2", appContext.getPackageName());
+        assertEquals("com.learning.ControlMinim2", appContext.getPackageName());
     }
 }

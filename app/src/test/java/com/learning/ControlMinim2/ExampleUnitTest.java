@@ -1,4 +1,4 @@
-package com.learning.SimulMinim2;
+package com.learning.ControlMinim2;
 
 import org.junit.Test;
 

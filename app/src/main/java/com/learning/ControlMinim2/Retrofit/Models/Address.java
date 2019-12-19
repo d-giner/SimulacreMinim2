@@ -1,4 +1,4 @@
-package com.learning.SimulMinim2.Retrofit.Models;
+package com.learning.ControlMinim2.Retrofit.Models;
 
 public class Address {
 

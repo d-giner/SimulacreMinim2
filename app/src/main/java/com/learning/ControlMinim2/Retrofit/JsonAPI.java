@@ -1,10 +1,10 @@
-package com.learning.SimulMinim2.Retrofit;
+package com.learning.ControlMinim2.Retrofit;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
-import com.learning.SimulMinim2.Retrofit.Models.*;
+import com.learning.ControlMinim2.Retrofit.Models.*;
 
 public interface JsonAPI {
 

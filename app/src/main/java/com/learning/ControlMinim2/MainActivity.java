@@ -1,4 +1,4 @@
-package com.learning.SimulMinim2;
+package com.learning.ControlMinim2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,9 +8,13 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
-import com.learning.SimulMinim2.Retrofit.JsonAPI;
-import com.learning.SimulMinim2.Retrofit.Models.Museums;
+import com.learning.ControlMinim2.Retrofit.JsonAPI;
+import com.learning.ControlMinim2.Retrofit.Models.Element;
+import com.learning.ControlMinim2.Retrofit.Models.Museums;
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -22,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerList;
     private ProgressBar progressBar;
     private JsonAPI jsonData;
+    private DataAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,13 +58,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadData(){
-        Call<Museums> call = jsonData.getData("1", "15");
+        Call<Museums> call = jsonData.getData("1", "5");
         call.enqueue(new Callback<Museums>() {
             @Override
             public void onResponse(Call<Museums> call, Response<Museums> response) {
                 if (response.isSuccessful()) {
                     Museums museums = response.body();
-                    recyclerList.setAdapter(new DataAdapter(museums.getElements()));
+                    adapter = new DataAdapter(museums.getElements());
+                    recyclerList.setAdapter(adapter);
                     progressBar.setVisibility(View.GONE);
                 }
             }
@@ -67,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<Museums> call, Throwable t) {
 
+                //Què volem fer en cas de fallada.
             }
         });
     }
-
 }

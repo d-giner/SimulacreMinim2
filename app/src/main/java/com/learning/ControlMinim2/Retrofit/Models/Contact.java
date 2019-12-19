@@ -1,4 +1,4 @@
-import com.learning.SimulMinim2.Retrofit.Models.Address;
+import com.learning.ControlMinim2.Retrofit.Models.Address;
 
 public class Contact {
 
